@@ -1,7 +1,15 @@
 .form-container {
-  max-width: 600px;
   border-radius: 10px;
 
+  width: 513px;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
   .form-content {
     display: flex;
     flex-direction: column;
@@ -11,7 +19,20 @@
     display: flex;
     gap: 24px;
   }
+  .input-group-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 
+    p {
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: 0.02em;
+      color: #616161;
+      padding-left: 12px;
+    }
+  }
   input,
   textarea {
     width: 100%;
@@ -32,7 +53,7 @@
       color: #616161;
       font-size: 14px;
       line-height: 150%;
-      letter-spacing: 2%;
+      letter-spacing: 0.02em;
     }
   }
 
@@ -51,8 +72,106 @@
     border-radius: 50px;
     width: fit-content;
     line-height: 120%;
-    letter-spacing: 2%;
+    letter-spacing: 0.02em;
     padding: 12px 24px;
     cursor: pointer;
+  }
+
+  .react-tel-input {
+    .form-control {
+      width: 100% !important;
+      height: 56px !important;
+      border: 1px solid #dedede !important;
+      border-radius: 10px !important;
+      font-size: 14px !important;
+      letter-spacing: 0.02em;
+      padding-left: 0.75rem !important;
+      &:focus {
+        outline: none !important;
+        border-color: #e5edf7 !important;
+        box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2) !important;
+      }
+      .react-tel-input .form-control &::placeholder {
+        color: #616161;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    .flag-dropdown {
+      background: transparent !important;
+      border: none !important;
+      border-radius: 10px 0 0 10px !important;
+
+      &.open {
+        background: transparent !important;
+        border: none !important;
+      }
+
+      .selected-flag {
+        background: transparent !important;
+        width: 60px !important;
+        padding: 0 0 0 12px !important;
+        border-radius: 10px 0 0 10px !important;
+
+        .flag {
+          display: none !important;
+        }
+      }
+    }
+
+    .country-list {
+      border-radius: 10px !important;
+      margin: 10px 0 !important;
+      padding: 0 !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+      background-color: white !important;
+      max-height: 300px !important;
+
+      .search {
+        padding: 10px 15px !important;
+
+        input {
+          font-size: 14px !important;
+          padding: 10px 15px !important;
+          border: 1px solid #dedede !important;
+          border-radius: 10px !important;
+
+          &:focus {
+            outline: none !important;
+            border-color: #e5edf7 !important;
+            box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2) !important;
+          }
+        }
+      }
+
+      .country {
+        padding: 12px 15px !important;
+        display: flex !important;
+        align-items: center !important;
+
+        .flag {
+          display: none !important;
+        }
+
+        .country-name {
+          color: #616161 !important;
+          font-size: 14px !important;
+          margin-left: 0 !important;
+        }
+
+        .dial-code {
+          color: #1e1e1e !important;
+          font-size: 14px !important;
+          margin-left: 8px !important;
+        }
+
+        &:hover,
+        &.highlight {
+          background-color: #f5f7fa !important;
+        }
+      }
+    }
   }
 }
