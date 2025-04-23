@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Webelocity
+
+A modern Next.js 15.3 application built with React 19 and TypeScript, featuring a responsive design, Google Maps integration, and form handling capabilities.
+
+## Features
+
+- **Modern Tech Stack**: Built with Next.js 15.3 and React 19
+- **TypeScript Support**: Full TypeScript integration for better type safety and developer experience
+- **Google Maps Integration**: Using `@react-google-maps/api` for map functionality
+- **Form Handling**: Robust form management with `react-hook-form` and `zod` validation
+- **Phone Input**: International phone number input support with `react-phone-input-2`
+- **Toast Notifications**: User feedback system using `react-toastify`
+- **SASS Styling**: Advanced styling capabilities with SASS
+
+## Project Structure
+
+```
+webelocity/
+├── src/                    # Source code directory
+│   ├── app/               # Next.js app directory
+│   │   ├── layout.tsx    # Root layout component
+│   │   ├── page.tsx      # Home page component
+│   │   └── globals.css   # Global styles
+│   ├── components/        # Reusable UI components
+│   │   ├── location-mark/ # Location marking components
+│   │   ├── map/          # Google Maps related components
+│   │   ├── form/         # Form components
+│   │   ├── header/       # Header components
+│   │   ├── theme/        # Theme-related components
+│   │   └── ui/           # Basic UI components
+│   ├── providers/        # React context providers
+│   ├── types/           # TypeScript type definitions
+│   └── sections/        # Page sections and layouts
+├── public/              # Static files
+├── next.config.ts      # Next.js configuration
+└── tsconfig.json       # TypeScript configuration
+```
 
 ## Getting Started
 
-First, run the development server:
+1. **Prerequisites**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   - Node.js (Latest LTS version recommended)
+   - npm or yarn
+2. **Installation**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+3. **Development**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   The application will be available at `http://localhost:3000`
+4. **Build**
 
-## Learn More
+   ```bash
+   npm run build
+   # or
+   yarn build
+   ```
+5. **Production**
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   npm run start
+   # or
+   yarn start
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Dependencies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Core Dependencies
 
-## Deploy on Vercel
+- `next`: 15.3.1
+- `react`: 19.0.0
+- `react-dom`: 19.0.0
+- `typescript`: 5.x
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Feature Dependencies
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `@react-google-maps/api`: Google Maps integration
+- `react-hook-form`: Form handling
+- `@hookform/resolvers`: Form validation resolvers
+- `zod`: Schema validation
+- `react-phone-input-2`: Phone number input
+- `react-toastify`: Toast notifications
+
+### Development Dependencies
+
+- `sass`: SCSS/SASS support
+- Various TypeScript type definitions
