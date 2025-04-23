@@ -57,7 +57,7 @@ export default function Form() {
                 searchPlaceholder="Search country code"
                 countryCodeEditable={false}
                 enableAreaCodes={true}
-                showDropdown={true}
+                showDropdown={false}
                 renderStringAsFlag=""
                 autocompleteSearch={true}
               />
