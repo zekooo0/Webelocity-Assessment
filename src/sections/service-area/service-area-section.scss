@@ -1,0 +1,112 @@
+.service-area-section {
+  background: #eef0f3;
+  width: 85%;
+  border-radius: 10px;
+  margin: 60px auto;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+
+  @media (max-width: 1024px) {
+    width: 90%;
+    margin: 40px auto;
+  }
+
+  @media (max-width: 768px) {
+    width: 95%;
+    margin: 30px auto;
+  }
+
+  .typography-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      width: 90%;
+      gap: 10px;
+    }
+
+    h1 {
+      font-family: Lexend Deca;
+      font-weight: 400;
+      font-size: 44px;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      color: #000;
+
+      @media (max-width: 1024px) {
+        font-size: 36px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 24px;
+      }
+    }
+
+    h3 {
+      font-family: Lexend Deca;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 180%;
+      letter-spacing: 0.02em;
+      color: #485568;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+        line-height: 160%;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 14px;
+      }
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .map-container {
+    width: 100%;
+    height: 100%;
+    height: 700px;
+    position: relative;
+
+    @media (max-width: 768px) {
+      min-height: 400px;
+    }
+
+    @media (max-width: 480px) {
+      min-height: 300px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 70%;
+    background: linear-gradient(
+      to bottom,
+      #eef0f3,
+      #eef0f3,
+      #eef0f3,
+      transparent
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+}
